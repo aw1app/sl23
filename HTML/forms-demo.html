@@ -3,8 +3,35 @@
 <body>
 <form name="user-form" action="processData.php" METHOD="GET">
 
+    <br> <label for="name1">Your  name:</label>
+    <input type="text" name="name1">
+
+    <br> Your Age: <input type="text" name="a1" size="100" max="5">
+
+    <br> Your Card No: <input type="text" name="cardno">
+    
+    <br><br>
+    Which Vehicle do you own?
+    <select> 
+        <option>Car </option>
+        <option>Bus </option>
+        <option>Bike </option>
+        </select>
+
+
+    <br><br> <input type="submit">
+
+</form>
+
+<br> POST METHOD FORM DEMO
+
+<form name="user-form" action="processData2.php" METHOD="POST">
+
     <br> Your Name: <input type="text" name="name1">
     <br> Your Age: <input type="text" name="a1">
+
+    <br> Your Card No: <input type="text" name="cardno">
+
 
     <br><br> <input type="submit">
 
