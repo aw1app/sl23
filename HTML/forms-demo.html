@@ -1,12 +1,13 @@
 <html>
 
 <body>
+    Your Profile Data:
 <form name="user-form" action="processData.php" METHOD="GET">
 
     <br> <label for="name1">Your  name:</label>
     <input type="text" name="name1">
 
-    <br> Your Age: <input type="text" name="a1" size="100" max="5">
+    <br> Your Age: <input type="number" name="a1" size="100" max="5">
 
     <br> Your Card No: <input type="text" name="cardno">
     
@@ -31,6 +32,16 @@
     <input type="radio" name="income" value="2"> 100-1000
     <input type="radio" name="income" value="3"> 1k-10k
     <input type="radio" name="income" value="4"> 10-100k
+
+    <!-- Teaxt area demo-->
+    <br><br> Your Accomplishment:
+    <br>
+    <textarea rows="10">
+        I did so and so.
+        I was awareded so and sonm
+    </textarea>
+
+    <br><br> <button>Click me!</button>
 
     <br><br> <input type="submit">
 
