@@ -17,27 +17,51 @@
             text-align: center;
         }
 
-        #div1, #myh1 {
+        #div1,
+        #myh1 {
             font-size: 50px;
         }
 
         .myclass1 {
             font-size: 70px;
-            color:blueviolet
+            color: blueviolet
         }
 
-        .myclass2 {           
-            background-color:greenyellow
+        .myclass2 {
+            background-color: greenyellow
         }
 
-        <!-- CSS Class Selector demo-->
-        h2.myclass3{
-            background-color:azure
+        < !-- CSS Class Selector demo-->h2.myclass3 {
+            background-color: azure
         }
 
-        <!-- CSS Attribute Selector demo-->
-        input[type="number"]{
-            background-color:red
+        < !-- CSS Attribute Selector demo-->input[type="number"] {
+            background-color: red
+        }
+
+
+        < !-- descendant demo-->body>p {
+            color: red
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: yellow;
+        }
+
+        a:active {
+            color: pink
+        }
+
+        a:hover {
+            color: green;
+        }
+
+        div > div:first-child > div:first-child{
+            font-size: 100px
         }
     </style>
 
@@ -46,9 +70,25 @@
 </head>
 
 <body>
+    <div>1
+        <div>2
+        <div>3 </div>
+        <div>4 </div>
+        </div>
+
+    </div>
+
+
+    <a href="a.com" target="_blank"> Click me 1</a>
+    <a href="a.com" target="_blank"> Click me 2</a>
+    <p> P1
+    <div> Div Text </div>
+    </p>
+
+
     <!-- CSS Attribute Selector demo-->
-<input type="text">
-<input type="number">
+    <input type="text" value="tytgyututitoto" id="text1" name="text1">
+    <input type="number">
 
 
     <h1 class="myclass1 myclass2">Welcome to Phiilips.com</h1>
@@ -57,7 +97,7 @@
     <p>Paragraph starts from here</p>
     <p style="color:blue">123 Paragraph starts from here</p>
 
-    <div>asasa sa</div>   
+    <div>asasa sa</div>
 
     <div id="div1" class="myclass2">Apple</div>
     <div class="myclass1">Orange</div>
