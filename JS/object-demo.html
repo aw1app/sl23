@@ -1,9 +1,13 @@
 <script>
 
 // Definition of Car object
-function Car(name, modelYear){
-    this.name = name;
-    this.modelYear = modelYear;
+function Car(name1, modelYear1){
+    this.name = name1;
+    this.modelYear = modelYear1;
+
+    this.displayMe = function (){
+        console.log("My name is "+this.name+ " and modelYear is " + this.modelYear);
+    }
 };
 
 let c1= new Car("Toyota", "1996");
@@ -13,4 +17,13 @@ let c2 = new Car("Rolls Royce", "2006");
 console.log("C1 car name is " + c1.name);
 console.log("C2 car has name  " + c2.name);
 
+// Invoke the car's displayMe function
+c1.displayMe(); 
+
 </script>
+
+<!-- PROBLEM
+Create a Bus object defintion that
+takes name and price as parameters.
+Create 2 bus objects. 
+Print the total price of those 2 buses -->
