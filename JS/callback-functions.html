@@ -8,12 +8,27 @@ function f1(x,y,z){
     return x+y;
 };
 
+function f1(x,y,z1,z2){
+    //// some thousand lines
+    z1();
+    /// some hundered lines
+    z2();
+    return x+y;
+};
+
 
 function f2(){
     console.log("In F2");
 }
 
-console.log ( "RESULT is " + f1(2,3,f2) );
+function f3(){
+    console.log("In F3");
+}
+
+console.log ( "Passing the callback function f2, RESULT is " + f1(2,3,f2) );
+
+console.log ( "Passing the callback function f3, RESULT is " + f1(2,3,f3) );
+
 
 
 </script>
