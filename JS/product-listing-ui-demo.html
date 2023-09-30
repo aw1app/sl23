@@ -1,102 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Listing</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
 
-    .product-card {
-      width: 300px;
-      padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      margin: 20px;
-      display: inline-block;
-      vertical-align: top;
-      text-align: left;
-    }
+        .product-card {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            display: inline-block;
+            vertical-align: top;
+            text-align: left;
+        }
 
-    .product-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
-      margin-bottom: 10px;
-    }
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
 
-    .product-card h2 {
-      margin: 0 0 10px 0;
-    }
+        .product-card h2 {
+            margin: 0 0 10px 0;
+        }
 
-    .product-card p {
-      margin: 0;
-    }
+        .product-card p {
+            margin: 0;
+        }
 
-    .product-card .price {
-      font-weight: bold;
-      color: green;
-      font-size: 1.2em;
-    }
-  </style>
+        .product-card .price {
+            font-weight: bold;
+            color: green;
+            font-size: 1.2em;
+        }
+    </style>
 </head>
+
 <body>
-  <div id="product-list"></div>
+    <div id="product-list"></div>
 
-  <script>
-    class Product {
-      constructor(name, description, price, imageUrl) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.imageUrl = imageUrl;
-      }
+    <script>
+        class Product {
+            constructor(name, description, price, imageUrl) {
+                this.name = name;
+                this.description = description;
+                this.price = price;
+                this.imageUrl = imageUrl;
+            }
 
-      createProductCard() {
-        const card = document.createElement('div');
-        card.classList.add('product-card');
+            createProductCard() {
+                const card = document.createElement('div');
+                card.classList.add('product-card');
 
-        const image = document.createElement('img');
-        image.src = this.imageUrl;
-        image.alt = this.name;
+                const image = document.createElement('img');
+                image.src = this.imageUrl;
+                image.alt = this.name;
 
-        const title = document.createElement('h2');
-        title.textContent = this.name;
+                const title = document.createElement('h2');
+                title.textContent = this.name;
 
-        const desc = document.createElement('p');
-        desc.textContent = this.description;
+                const desc = document.createElement('p');
+                desc.textContent = this.description;
 
-        const price = document.createElement('p');
-        price.classList.add('price');
-        price.textContent = `$${this.price}`;
+                const price = document.createElement('p');
+                price.classList.add('price');
+                price.textContent = `$${this.price}`;
 
-        card.appendChild(image);
-        card.appendChild(title);
-        card.appendChild(desc);
-        card.appendChild(price);
+                card.appendChild(image);
+                card.appendChild(title);
+                card.appendChild(desc);
+                card.appendChild(price);
 
-        return card;
-      }
-    }
+                return card;
+            }
+        }
 
-    const products = [
-      new Product('Product 1', 'Description of Product 1', 19.99, 'https://via.placeholder.com/200'),
-      new Product('Product 2', 'Description of Product 2', 29.99, 'https://via.placeholder.com/201'),
-      new Product('Product 3', 'Description of Product 3', 39.99, 'https://via.placeholder.com/202')
-    ];
+        const products = [
+            new Product('Samsung', 'Description of Product 1', 19.99, 'https://via.placeholder.com/200'),
+            new Product('Product 2', 'Description of Product 2', 29.99, 'https://via.placeholder.com/201'),
+            new Product('Product 3', 'Description of Product 3', 39.99, 'https://via.placeholder.com/202'),
+            new Product('Nokia', 'Description of Nokia blah blah', 109.99, 'https://via.placeholder.com/202')
+        ];
 
-    const productListElement = document.getElementById('product-list');
+        const productListElement = document.getElementById('product-list');
 
-    products.forEach(product => {
-      const productCard = product.createProductCard();
-      productListElement.appendChild(productCard);
-    });
-  </script>
+        products.forEach(product => {
+            const productCard = product.createProductCard();
+            productListElement.appendChild(productCard);
+        });
+    </script>
 </body>
+
 </html>
