@@ -85,7 +85,12 @@
 
                 // Add click event to navigate to product details
                 card.addEventListener('click', () => {
-                    alert("Added " +this.name + "added to the cart!");
+                    alert("Added " +this.name + " added to the cart!");
+                    window.open(this.name+".html","_blank")
+
+                    // PROBLEM : Instead of alert above, go to the product's details page.
+                    // HINT: use window.open(someurl)
+                    // like window.open(this.name+".html")
                 }
                 );
 
