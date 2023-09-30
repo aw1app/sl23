@@ -1,0 +1,19 @@
+<script>
+
+// pass some int values to x and y
+// pass a function in z
+function f1(x,y,z){
+    //// some thousand lines
+    z();
+    return x+y;
+};
+
+
+function f2(){
+    console.log("In F2");
+}
+
+console.log ( "RESULT is " + f1(2,3,f2) );
+
+
+</script>
