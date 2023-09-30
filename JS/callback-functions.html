@@ -30,7 +30,7 @@ console.log ( "Passing the callback function f2, RESULT is " + f1(2,3,f2) );
 console.log ( "Passing the callback function f3, RESULT is " + f1(2,3,f3) );
 
 //Example 2
-function g(x,mycallback){
+function g(x,somecallback){
     mycallback(x);
 }
 
@@ -39,5 +39,14 @@ function cube(x){ return x^3;};
 
 console.log ( g(2,square) );//4
 console.log ( g(2,cube) );//8
+
+// Write Example 2 above using arrow functions
+gNew = (x,somecallback) =>mycallback(x); // PERFECT
+
+squareNew = x => x^2;
+cubeNew = x =>x^3;
+
+console.log ( gNew(2,squareNew) );//4
+console.log ( gNew(2,cubeNew) );//8
 
 </script>
