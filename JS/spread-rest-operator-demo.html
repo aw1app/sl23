@@ -1,0 +1,51 @@
+<script>
+
+let ageArray = [2, 56, 67 , 100];
+
+// function sum(arr){
+
+//     let total =0;
+
+//     arr.forEach(item => total=total+item );
+
+//     return total;
+
+// };
+
+// console.log( sum( ageArray ));
+
+
+function f1(x,y,z){
+    return x+y+z;
+}
+function f2(x,y,z,a){
+    return x+y+z+a;
+}
+
+// Traditional way of calling f1 for ageArray
+console.log("Using Traditional way " +  f1(ageArray[0], ageArray[1], ageArray[2]) ) ;
+
+// 2015 ES6 (Modern way using spread operator)
+console.log( "Using ... opeartor " + f1(...ageArray) );
+
+
+// REST operator - gathering 
+let [x,y, ...ageArray1] = ageArray;
+//
+console.log(x); // 2
+console.log(y); // 56
+console.log(ageArray1); // 67,100
+
+//More Application of spread operators
+//  can be used to concatenate arrays
+let heightArrayCompany1 = [4, 2, 56, 67 , 100];
+let heightArrayCompany2 = [75,10];
+let heightArrayCompany1_2 = [ ...heightArrayCompany1, ...heightArrayCompany2 ];
+console.log(heightArrayCompany1_2); //  [4, 2, 56, 67, 100, 75, 10]
+
+
+
+
+
+
+</script>

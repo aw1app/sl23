@@ -16,55 +16,68 @@
     // switch demo
     let day = 100;
 
-    switch(day){
-        case 1: console.log("It's Monday ");  break;
+    switch (day) {
+        case 1: console.log("It's Monday "); break;
         case 2: console.log("It's Tuesday "); break;
-        case 3: console.log("It's Wednesday ");break;
-        case 4: console.log("It's Thursday ");break;
-        case 5: console.log("It's Friday ");break;
-        case 6: console.log("It's Saturday ");break;
-        case 7: console.log("It's Sunday ");break;
-        default : console.log("Not a valid day ");
+        case 3: console.log("It's Wednesday "); break;
+        case 4: console.log("It's Thursday "); break;
+        case 5: console.log("It's Friday "); break;
+        case 6: console.log("It's Saturday "); break;
+        case 7: console.log("It's Sunday "); break;
+        default: console.log("Not a valid day ");
     };
 
     // demo for loop
-    for (let i=0 ; i<5 ; i++){
+    for (let i = 0; i < 5; i++) {
         // do something here
-        console.log("i="+ i);
+        console.log("i=" + i);
     }
 
     // demo for loop with break
     console.log("");
     console.log("demo for loop with break");
-    for (let i=0 ; i<5 ; i++){
+    for (let i = 0; i < 5; i++) {
         // do something here
-        if(i==3) break ;
-        console.log("i="+ i);        
+        if (i == 3) break;
+        console.log("i=" + i);
     }
 
     // demo for loop with continue
     console.log("");
     console.log("demo for loop with continue");
-    for (let i=0 ; i<5 ; i++){
+    for (let i = 0; i < 5; i++) {
         // do something here
-        if(i<2) continue ;
-        console.log("i="+ i);        
+        if (i < 2) continue;
+        console.log("i=" + i);
     };
 
     // demo for-of loop specially for an array
     console.log("");
     console.log("demo for-of loop specially for an array");
-    
-    let ageArray = [2, 56, 67 , 100];
 
-    for (let age of ageArray){
-        console.log("age="+ age);
+    let ageArray = [2, 56, 67, 100];
+
+    for (let age of ageArray) {
+        console.log("age=" + age);
     }
 
     // CHALLENGE:
     // Given an array of 5 person objects ( Create a Person function having name and age, and then create 5 person objects)
     // Use the for-of loop, to display only those persons whose age is less than 50. 
 
+    console.log("demo for-in loop specially for objects");
+    let user1 = {
+        name: "ssdsd",
+        age: 100
+    };
 
+    //alert(user1);
+
+    for (let prop in user1){
+       alert("property is " + prop + " and value = "+ user1[prop]);
+        
+    }
+
+    
 
 </script>
