@@ -83,6 +83,12 @@
                 card.appendChild(desc);
                 card.appendChild(price);
 
+                // Add click event to navigate to product details
+                card.addEventListener('click', () => {
+                    alert("Added " +this.name + "added to the cart!");
+                }
+                );
+
                 return card;
             }
         }
@@ -102,5 +108,12 @@
         });
     </script>
 </body>
+
+// PROBLEM: How would you show products having price > $30
+<!-- products.forEach(product => {
+    if(product.price>40){
+    const productCard = product.createProductCard();
+    productListElement.appendChild(productCard);
+}}); -->
 
 </html>
