@@ -7,7 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ProductComponent {
 
-  name = "Samsung";
-  price=10005;
+  name:string = "Samsung";
+  price:number=10005;
+
+  /// controller code
+
+  // const f1 = ():string => {
+  //   return "Hello World";
+  // }
 
 }
