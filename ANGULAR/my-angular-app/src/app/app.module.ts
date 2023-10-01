@@ -16,3 +16,6 @@ import { ProductComponent } from './product/product.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
+//PROBLEM: Create a User Component and display the user name and email on the front page
