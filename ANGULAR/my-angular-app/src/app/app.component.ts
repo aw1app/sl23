@@ -10,5 +10,5 @@ export class AppComponent {
 
   name = 'Jason';
 
-  p1 = (evt:any) => console.log(`Child gave me this message  - ${evt}`);
+  p1 = (evt:any) => console.log("Child gave me this message  - "+evt);
 }

@@ -7,6 +7,8 @@ import { UserComponent } from './user/user.component';
 import { FormsModule } from '@angular/forms';
 import { ProductV2Component } from './product-v2/product-v2.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { ProductService } from './services/product.service';
+import { ProductV3Component } from './product-v3/product-v3.component';
 
 @NgModule({
   declarations: [
@@ -14,12 +16,13 @@ import { ProductListComponent } from './product-list/product-list.component';
     ProductComponent,
     UserComponent,
     ProductV2Component,
-    ProductListComponent
+    ProductListComponent,
+    ProductV3Component
   ],
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
