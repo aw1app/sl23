@@ -17,7 +17,7 @@ export class ProductComponent {
   f1 = ():string=> {
     alert( "Hello World 1" + this.i ) ;
     this.i=this.i+1;
-    //return "Hi";
+    return "Hi";
   }
 
   f2 = ():void=> {
