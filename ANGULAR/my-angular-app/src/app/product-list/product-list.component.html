@@ -1,0 +1,32 @@
+<div style="border: 2px solid blue">
+    Product list: <br><br>
+
+    <table border="2">
+        <thead>
+            <td>IMAGE</td>
+            <td>NAME</td>
+            <td>PRICE</td>
+            <td>DESC</td>
+
+        </thead>
+        <div *ngIf="products.length>0">
+            <div *ngFor="let prod of products">
+
+                <tr>
+                    <td> <img [src]="prod.imageUrl" width="100px" height="120px"></td>
+                    <td> {{prod.name}}</td>
+                    <td> {{prod.price}}</td>
+                    <td> {{prod.desc}}</td>
+                </tr>
+
+            </div>
+        </div>
+
+        <div *ngIf="products.length==0">
+            No Products to show
+        </div>
+
+    </table>
+
+
+</div>
