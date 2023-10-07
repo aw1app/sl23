@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Product } from '../model/product';
 
 @Component({
@@ -12,6 +12,11 @@ export class ProductV2Component {
 
   //Demo getting data from the parent component
 @Input('var1') messageFromParent!:string;
+
+//Demo sharing data with the parent component
+@Output() childEventWithSomeMessage = new EventEmitter<string>(); 
+
+f3=()=> this.childEventWithSomeMessage.emit("Dear Parent, listen to me.");
 
 
   str1:string="some string";

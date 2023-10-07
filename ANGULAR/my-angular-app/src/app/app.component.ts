@@ -9,4 +9,6 @@ export class AppComponent {
   title = 'my-great-angular-app  s s d de dfe de e re re er er ';
 
   name = 'Jason';
+
+  p1 = (evt:any) => console.log(`Child gave me this message  - ${evt}`);
 }
