@@ -22,6 +22,7 @@ import { AddProductComponent } from './add-product/add-product.component';
 
 
 const routes: Routes = [
+ // { path: '', redirect: component: AppComponent },
   { path: 'home', component: AppComponent },
   { path: 'product/:id', component: ProductV5Component },
   { path: 'product-list', component: ProductListV4Component },
