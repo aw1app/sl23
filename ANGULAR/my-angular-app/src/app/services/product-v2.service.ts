@@ -11,6 +11,7 @@ export class ProductV2Service {
   private apiUrl = 'https://dummyjson.com/products';
 
   products:Product[] = [];
+  product!: Product;
 
   constructor(private httpClient: HttpClient) { }
 
@@ -19,5 +20,8 @@ export class ProductV2Service {
     pipe(map(response => response.products));
   }
 
+  getProduct(id:string): Observable<Product> {
+    return this.httpClient.get< Product >(this.apiUrl+"/"+id);
+  }
 
 }
