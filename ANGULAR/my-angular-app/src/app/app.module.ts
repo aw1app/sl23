@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+import { RouterModule, Routes } from '@angular/router';
+
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -14,6 +16,15 @@ import { ProductV3Component } from './product-v3/product-v3.component';
 import { ProductV2Service } from './services/product-v2.service';
 import { ProductV4Component } from './product-v4/product-v4.component';
 import { ProductListV4Component } from './product-list-v4/product-list-v4.component';
+import { NoSuchPageComponent } from './no-such-page/no-such-page.component';
+
+
+const routes: Routes = [
+  { path: 'home', component: AppComponent },
+  { path: 'product-list', component: ProductListV4Component },
+  { path: 'user', component: UserComponent },
+  { path: '*', component: NoSuchPageComponent },
+]
 
 @NgModule({
   declarations: [
@@ -24,11 +35,13 @@ import { ProductListV4Component } from './product-list-v4/product-list-v4.compon
     ProductListComponent,
     ProductV3Component,
     ProductV4Component,
-    ProductListV4Component
+    ProductListV4Component,
+    NoSuchPageComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule
+    BrowserModule, HttpClientModule,RouterModule.forRoot(routes)
   ],
+  exports:[RouterModule],
   providers: [ProductService, ProductV2Service],
   bootstrap: [AppComponent]
 })

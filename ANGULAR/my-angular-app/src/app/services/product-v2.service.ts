@@ -24,4 +24,6 @@ export class ProductV2Service {
     return this.httpClient.get< Product >(this.apiUrl+"/"+id);
   }
 
+  //CHALENGE: Write a ProductListV5 that displays products whose price is >1000
+
 }
