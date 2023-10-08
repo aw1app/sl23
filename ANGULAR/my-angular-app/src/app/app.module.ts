@@ -17,10 +17,12 @@ import { ProductV2Service } from './services/product-v2.service';
 import { ProductV4Component } from './product-v4/product-v4.component';
 import { ProductListV4Component } from './product-list-v4/product-list-v4.component';
 import { NoSuchPageComponent } from './no-such-page/no-such-page.component';
+import { ProductV5Component } from './product-v5/product-v5.component';
 
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
+  { path: 'product/:id', component: ProductV5Component },
   { path: 'product-list', component: ProductListV4Component },
   { path: 'user', component: UserComponent },
   { path: '*', component: NoSuchPageComponent },
@@ -36,7 +38,8 @@ const routes: Routes = [
     ProductV3Component,
     ProductV4Component,
     ProductListV4Component,
-    NoSuchPageComponent
+    NoSuchPageComponent,
+    ProductV5Component
   ],
   imports: [
     BrowserModule, HttpClientModule,RouterModule.forRoot(routes)
