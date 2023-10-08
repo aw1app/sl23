@@ -12,10 +12,10 @@ export class ProductV2Service {
 
   products:Product[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor(private httpClient: HttpClient) { }
 
   getAllProducts(): Observable<Product[]> {
-    return this.http.get<{ products: Product[] }>(this.apiUrl).
+    return this.httpClient.get<{ products: Product[] }>(this.apiUrl).
     pipe(map(response => response.products));
   }
 
