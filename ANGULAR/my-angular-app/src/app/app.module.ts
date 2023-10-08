@@ -4,11 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ProductComponent,  } from './product/product.component';
 import { UserComponent } from './user/user.component';
-import { FormsModule } from '@angular/forms';
 import { ProductV2Component } from './product-v2/product-v2.component';
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductService } from './services/product.service';
@@ -18,12 +18,14 @@ import { ProductV4Component } from './product-v4/product-v4.component';
 import { ProductListV4Component } from './product-list-v4/product-list-v4.component';
 import { NoSuchPageComponent } from './no-such-page/no-such-page.component';
 import { ProductV5Component } from './product-v5/product-v5.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 
 const routes: Routes = [
   { path: 'home', component: AppComponent },
   { path: 'product/:id', component: ProductV5Component },
   { path: 'product-list', component: ProductListV4Component },
+  { path: 'add-product', component: AddProductComponent },  
   { path: 'user', component: UserComponent },
   { path: '*', component: NoSuchPageComponent },
 ]
@@ -39,10 +41,11 @@ const routes: Routes = [
     ProductV4Component,
     ProductListV4Component,
     NoSuchPageComponent,
-    ProductV5Component
+    ProductV5Component,
+    AddProductComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,RouterModule.forRoot(routes)
+    BrowserModule, HttpClientModule,RouterModule.forRoot(routes), FormsModule,ReactiveFormsModule,
   ],
   exports:[RouterModule],
   providers: [ProductService, ProductV2Service],
