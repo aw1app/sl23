@@ -24,10 +24,8 @@ export class AddProductComponent {
 
   addProduct() {
     // Logic to add product goes here
-    console.log('Product added:', this.productForm.value);
+    //console.log('Product added:', this.productForm.value);
     //let productFormObject=this.productForm.value
-    //this.productService.addProduct(new Product(1, productFormObject.productName, productFormObject.productPrice, 'Description goes here', 'Category', 'thumbnail-url.jpg'));
-    
-  }
+    this.productService.addProduct(this.productForm.value.productName);     }
 
 }

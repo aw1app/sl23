@@ -24,6 +24,19 @@ export class ProductV2Service {
     return this.httpClient.get< Product >(this.apiUrl+"/"+id);
   }
 
+  addProduct(title:string):void{
+    fetch('https://dummyjson.com/products/add', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        title: `${title}`,
+        /* other product data */
+      })
+    })
+    .then(res => res.json())
+    .then(console.log);
+  }
+
   //CHALENGE: Write a ProductListV5 that displays products whose price is >1000
 
 }
