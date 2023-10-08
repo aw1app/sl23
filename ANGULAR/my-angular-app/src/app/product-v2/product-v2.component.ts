@@ -8,7 +8,7 @@ import { Product } from '../model/product';
 })
 export class ProductV2Component {
 
-  product:Product = new Product("Nokia", 60000,"Nokia latest Angroid phone v13.0", "assets/images/NokiaPhone.png");
+  product!:Product;//= new Product("Nokia", 60000,"Nokia latest Angroid phone v13.0", "assets/images/NokiaPhone.png");
 
   i:number=0;
 

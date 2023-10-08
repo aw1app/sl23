@@ -16,10 +16,10 @@
             <div *ngFor="let prod of products">
 
                 <tr>
-                    <td> <img [src]="prod.imageUrl" width="60px" height="80px"></td>
-                    <td> {{prod.name}}</td>
+                    <td> <img [src]="prod.thumbnail" width="60px" height="80px"></td>
+                    <td> {{prod.title}}</td>
                     <td> {{prod.price}}</td>
-                    <td> {{prod.desc}}</td>
+                    <td> {{prod.description}}</td>
                 </tr>
 
             </div>

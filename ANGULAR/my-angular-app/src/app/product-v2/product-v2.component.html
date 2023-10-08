@@ -1,8 +1,8 @@
 
 <div class="product-card">
-    <img [src]="product.imageUrl" alt="Product Image" height="200" width="100">
-    <h2>{{product.name}}</h2>
-    <p>{{product.desc + "adssdsdsde"}}</p>
+    <img [src]="product.thumbnail" alt="Product Image" height="200" width="100">
+    <h2>{{product.title}}</h2>
+    <p>{{product.description + "adssdsdsde"}}</p>
     <p class="price">{{product.price + 1000}}</p>
 
     <button (click)="f2()">Click here to see the message from the parent</button>

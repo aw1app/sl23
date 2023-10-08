@@ -10,7 +10,7 @@ import { ProductService } from '../services/product.service';
 export class ProductV3Component {
 
   product!:Product;
-  productService!:ProductService;
+  productService:ProductService;
 
   constructor( productService: ProductService){
     this.productService=productService;
